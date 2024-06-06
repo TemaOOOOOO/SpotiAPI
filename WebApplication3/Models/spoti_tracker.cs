@@ -1,5 +1,13 @@
 ﻿namespace WebApplication3.Models
 {
+
+    public class AlbumModel
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Artist { get; set; }
+    }
+
     public class AlbumOfTrack
     {
         public string uri { get; set; }
@@ -13,6 +21,8 @@
     {
         public int totalCount { get; set; }
         public List<Item> items { get; set; }
+
+       
     }
 
     public class Artists
@@ -162,8 +172,11 @@
         public TopResults topResults { get; set; }
         public Tracks tracks { get; set; }
         public Users users { get; set; }
-    }
 
+       
+    }
+    
+   
     public class SharingInfo
     {
         public string shareUrl { get; set; }
@@ -194,6 +207,19 @@
         public List<Item> items { get; set; }
     }
 
+    public class Artist2
+    {
+        public string name { get; set; }
+        public string image { get; set; }
+        public string uri { get; set; }
+
+        public Artist2 (string name, string image, string uri)
+        {
+            this.name = name;
+            this.image = image;
+            this.uri = uri;
+        }
+    }
     public class Visuals
     {
         public AvatarImage avatarImage { get; set; }
